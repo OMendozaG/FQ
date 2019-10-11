@@ -1,0 +1,147 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 567
+  ClientWidth = 384
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMobile = True
+  DesignerWidth = 384
+  DesignerHeight = 592
+  DesignerDeviceName = 'Google Nexus 4'
+  DesignerOrientation = 0
+  DesignerOSVersion = ''
+  object Panel1: TPanel
+    Align = Client
+    Height = 505.000000000000000000
+    Width = 384.000000000000000000
+    TabOrder = 2
+    object Panel3: TPanel
+      Align = Bottom
+      Height = 113.000000000000000000
+      Position.Y = 392.000000000000000000
+      Width = 384.000000000000000000
+      TabOrder = 2
+      object RSection: TComboBox
+        Anchors = [akLeft, akTop, akRight]
+        DisableFocusEffect = False
+        Height = 32.000000000000000000
+        Position.X = 8.000000000000000000
+        Position.Y = 17.000000000000000000
+        TabOrder = 2
+        Width = 281.000000000000000000
+        OnChange = RSectionChange
+      end
+      object RElement: TComboBox
+        Anchors = [akLeft, akTop, akRight]
+        DisableFocusEffect = False
+        Height = 32.000000000000000000
+        Position.X = 154.000000000000000000
+        Position.Y = 17.000000000000000000
+        TabOrder = 1
+        Visible = False
+        Width = 134.000000000000000000
+      end
+      object Button2: TButton
+        Anchors = [akTop, akRight]
+        Height = 97.000000000000000000
+        Position.X = 296.000000000000000000
+        Position.Y = 8.000000000000000000
+        TabOrder = 3
+        Text = 'Run'
+        Width = 81.000000000000000000
+        OnClick = Button2Click
+      end
+      object RParams: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Anchors = [akLeft, akTop, akRight]
+        TabOrder = 5
+        Text = 'u: '#39'ftestls13@gmail.com'#39', p: '#39'l4gD3V3L0P3R!2014fb'#39
+        Position.X = 8.000000000000000000
+        Position.Y = 64.000000000000000000
+        Width = 281.000000000000000000
+        Height = 32.000000000000000000
+      end
+    end
+    object Memo1: TMemo
+      Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+      Align = Client
+      Height = 392.000000000000000000
+      TabOrder = 3
+      Width = 384.000000000000000000
+      ReadOnly = True
+    end
+  end
+  object Panel2: TPanel
+    Align = Top
+    Height = 62.000000000000000000
+    Width = 384.000000000000000000
+    TabOrder = 1
+    object Button1: TButton
+      Anchors = [akTop, akRight]
+      Height = 44.000000000000000000
+      Position.X = 248.000000000000000000
+      Position.Y = 8.000000000000000000
+      TabOrder = 1
+      Text = 'HTTP GET'
+      Width = 121.000000000000000000
+      OnClick = Button1Click
+    end
+    object Edit1: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Anchors = [akLeft, akTop, akRight]
+      TabOrder = 2
+      Text = 'fqdev'
+      Position.X = 56.000000000000000000
+      Position.Y = 15.000000000000000000
+      Width = 177.000000000000000000
+      Height = 32.000000000000000000
+    end
+    object loglevel: TComboBox
+      DisableFocusEffect = False
+      Height = 32.000000000000000000
+      Items.Strings = (
+        '0: System status'
+        '1: Errors'
+        '2: Warnings'
+        '3: Informational'
+        '4: Verbose'
+        '5: Extra verbose'
+        '6: Stupid verbose'
+        '7: Script Log')
+      ItemIndex = 4
+      Position.X = 8.000000000000000000
+      Position.Y = 16.000000000000000000
+      TabOrder = 4
+      Width = 33.000000000000000000
+    end
+  end
+  object Timer1: TTimer
+    Enabled = False
+    Interval = 50
+    OnTimer = Timer1Timer
+    Left = 40
+    Top = 94
+  end
+  object id: TIdHTTP
+    AllowCookies = True
+    ProxyParams.BasicAuthentication = False
+    ProxyParams.ProxyPort = 0
+    Request.ContentLength = -1
+    Request.ContentRangeEnd = -1
+    Request.ContentRangeStart = -1
+    Request.ContentRangeInstanceLength = -1
+    Request.Accept = 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    Request.AcceptLanguage = 'ES_ES'
+    Request.BasicAuthentication = False
+    Request.UserAgent = 'Mozilla/3.0 (compatible; Indy Library)'
+    Request.Ranges.Units = 'bytes'
+    Request.Ranges = <>
+    HTTPOptions = [hoForceEncodeParams]
+    Left = 56
+    Top = 246
+  end
+end
